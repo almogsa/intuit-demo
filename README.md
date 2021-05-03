@@ -1,6 +1,25 @@
-# Getting Started with Create React App
+# Social Player 
+## Installation 
+## Client: 
+### `npm install`
+### `npm start`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Server: 
+### `cd Server`
+### `npm install`
+### `npm start`
+## LIVE DEMO
+ https://intuit-player.herokuapp.com
+## CLIENT IMPLEMENTATION:
+    duplicate songs are not allowed
+    the url should be a valid for youtube ( there is a verification)
+    support on mobile devices 
+## SEVER IMPLEMENTATION:
+    1. In my implementation All the data on the server is essentially volatile, if you were to restart the application, all data would be lost.
+    Addtionaly, it would not scale across multiple server instances.
+    2. A little more complex solution: Store all playlist in a database and query the database to retrieve the last playlist when a user connects.
+    Pros: All data is persistent and if the server were to crash/be stopped, you still would be able to retrieve the data.
+    3. Last solution can be implemented by Redis which is in-memory data structure store
 
 ## Available Scripts
 

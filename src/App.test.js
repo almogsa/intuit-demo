@@ -1,8 +1,12 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import {render, screen} from '@testing-library/react';
+import Playlist from "./components/Playlist/Playlist";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+
+test('Render playlist and verify adding songs', () => {
+  const playlist = ['https://www.youtube.com/watch?v=L5CV53wCWO0'];
+  render(<Playlist playlist={playlist}/>)
+  const list = screen.getByTestId(/song-list/i);
+  expect(list).toBeInTheDocument();
+  const listItem = screen.getByTestId(/song-item/i);
+  expect(listItem).toBeInTheDocument();
+})
